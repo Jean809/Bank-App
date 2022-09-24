@@ -75,6 +75,8 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
+/*
+
 //SLICE
 const arr = [2, 5, 1, 7, 8];
 
@@ -95,6 +97,18 @@ const arr3 = ['d', 'c', 'b', 'a'];
 console.log(arr3.reverse());
 
 //The new "at()" method
-
 console.log(arr3.at(-1));
 console.log(arr3.at(0));
+*/
+
+//forEach loop
+
+movements.forEach(function (movement, index, array) {
+  if (movement > 0) {
+    console.log(`Movement ${index + 1}: You have deposited ${movement}`);
+  } else {
+    console.log(
+      `Movement ${index + 1}: You have withdrawn ${Math.abs(movement)} `
+    );
+  }
+});
